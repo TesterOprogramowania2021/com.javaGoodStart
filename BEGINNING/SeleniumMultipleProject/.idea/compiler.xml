@@ -6,10 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Shop" />
         <module name="Appium" />
-        <module name="Data" />
+        <module name="Shop-shemeBy" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Data" target="11" />
+      <module name="Shop-frameworkBy" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,3 +1,5 @@
+//public class SecendAutomatedTest {
+//}
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,7 +9,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-public class FirstAutomatedTest {
+public class SecendAutomatedTest {
 
     private WebDriver driver;
 
@@ -16,24 +18,10 @@ public class FirstAutomatedTest {
         System.setProperty("webdriver.chrome.driver", "C:/drivers/chromedriver.exe");
         driver = new ChromeDriver();
     }
-
-    @Test
-    public void myFirstTest() {
-        driver.navigate().to("https://duckduckgo.com/");
-
-        driver.findElement(By.id("search_form_input_homepage")).sendKeys("JavaStart");
-        driver.findElement(By.id("search_form_input_homepage")).submit();
-
-        String pageTitle = driver.getTitle();
-
-        assertTrue(pageTitle.contains("JavaStart"));
-    }
     @Test
     public void mySecondTest() {
         driver.navigate().to("https://selenium.dev/");
 
-//        driver.findElement(By.id("search_form_input_homepage")).sendKeys("JavaStart");
-//        driver.findElement(By.id("search_form_input_homepage")).submit();
 
         String pageTitle = driver.getTitle();
 

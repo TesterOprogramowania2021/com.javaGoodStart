@@ -1,5 +1,6 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -21,24 +22,15 @@ public class FirstAutomatedTest {
     public void myFirstTest() {
         driver.navigate().to("https://duckduckgo.com/");
 
-        driver.findElement(By.id("search_form_input_homepage")).sendKeys("JavaStart");
-        driver.findElement(By.id("search_form_input_homepage")).submit();
+        WebElement queryField = driver.findElement(By.id("search_form_input_homepage"));
+        queryField.sendKeys("JavaStart");
+        queryField.submit();
 
         String pageTitle = driver.getTitle();
 
         assertTrue(pageTitle.contains("JavaStart"));
     }
-    @Test
-    public void mySecondTest() {
-        driver.navigate().to("https://selenium.dev/");
 
-//        driver.findElement(By.id("search_form_input_homepage")).sendKeys("JavaStart");
-//        driver.findElement(By.id("search_form_input_homepage")).submit();
-
-        String pageTitle = driver.getTitle();
-
-        assertTrue(pageTitle.contains("Selenium"));
-    }
 
     @AfterMethod
     public void afterTest() {
